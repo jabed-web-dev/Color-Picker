@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="/src/styles.css">
+  <script src="/src/main.ts" type="module" defer></script>
+</head>
+
+<body>
+  <div class="app">
+    <div class="color-list" id="color-list">
+    </div>
+    <div class="main-content">
+      <div class="top-bar">
+        <button id="eyedropper-btn" class="eyedropper-btn">
+          <svg width="22" height="22">
+            <use href="/src/assets/icons.svg#eye-dropper"></use>
+          </svg>
+        </button>
+        <div class="color-picker-btn">
+          <input type="color" id="color-picker" class="color-picker">
+        </div>
+        <button id="trash-btn" class="trash-btn">
+          <svg width="16" height="16">
+            <use href="/src/assets/icons.svg#trash"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="selected-color-container">
+        <div class="shade-box" id="light1"></div>
+        <div class="shade-box" id="light2"></div>
+        <div class="selected-color" id="selected-color"></div>
+        <div class="shade-box" id="dark1"></div>
+        <div class="shade-box" id="dark2"></div>
+      </div>
+      <div class="color-code">
+        <span>HEX: <span id="hex-code"></span></span>
+        <button class="copy-btn" data-color-id="hex-code">
+          <svg width="18" height="18">
+            <use href="/src/assets/icons.svg#copy"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="color-code">
+        <span>RGB: <span id="rgb-code"></span></span>
+        <button class="copy-btn" data-color-id="rgb-code">
+          <svg width="18" height="18">
+            <use href="/src/assets/icons.svg#copy"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="color-code">
+        <span>HSL: <span id="hsl-code"></span></span>
+        <button class="copy-btn" data-color-id="hsl-code">
+          <svg width="18" height="18">
+            <use href="/src/assets/icons.svg#copy"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
